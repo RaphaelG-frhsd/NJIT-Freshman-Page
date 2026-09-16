@@ -1,0 +1,655 @@
+/* =========================================
+   RESET
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #111111;
+    color: white;
+}
+
+
+/* =========================================
+   GENERAL
+========================================= */
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+section {
+    scroll-margin-top: 80px;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.header {
+    width: 100%;
+    height: 80px;
+
+    background-color: #ffffff;
+    color: #111111;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 60px;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    z-index: 1000;
+
+    border-bottom: 4px solid #ed1c24;
+}
+
+
+/* LOGO */
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    color: #ed1c24;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 38px;
+    font-weight: bold;
+
+    letter-spacing: 3px;
+}
+
+.university-name {
+    font-size: 9px;
+    line-height: 10px;
+
+    margin-left: 12px;
+
+    font-weight: bold;
+}
+
+
+/* NAVIGATION */
+
+.navigation {
+    display: flex;
+    gap: 35px;
+}
+
+.navigation a {
+    color: #111111;
+
+    font-size: 14px;
+    font-weight: bold;
+
+    text-transform: uppercase;
+
+    transition: 0.3s;
+}
+
+.navigation a:hover {
+    color: #ed1c24;
+}
+
+
+/* =========================================
+   HERO / FRESHMAN INFO
+========================================= */
+
+.hero-section {
+
+    min-height: 100vh;
+
+    margin-top: 80px;
+
+    position: relative;
+
+    background-image:
+        linear-gradient(
+            rgba(0, 0, 0, 0.45),
+            rgba(0, 0, 0, 0.65)
+        ),
+        url("images/njit-campus.jpg");
+
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    align-items: center;
+}
+
+
+/* RED SIDE BAR */
+
+.hero-section::before {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    top: 0;
+
+    width: 9px;
+    height: 100%;
+
+    background-color: #ed1c24;
+}
+
+
+/* HERO CONTENT */
+
+.hero-content {
+    max-width: 1100px;
+
+    width: 90%;
+
+    margin: auto;
+
+    padding: 80px 0;
+}
+
+.small-title {
+    color: #ed1c24;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 20px;
+}
+
+.hero-content h1 {
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: clamp(60px, 9vw, 125px);
+
+    line-height: 0.85;
+
+    text-transform: uppercase;
+
+    margin-bottom: 35px;
+}
+
+.hero-description {
+    max-width: 450px;
+
+    font-size: 18px;
+
+    line-height: 1.6;
+
+    margin-bottom: 35px;
+}
+
+
+/* RED BUTTON */
+
+.red-button {
+    display: inline-block;
+
+    background-color: #ed1c24;
+
+    color: white;
+
+    padding: 15px 30px;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+
+    transition: 0.3s;
+}
+
+.red-button:hover {
+    background-color: white;
+
+    color: #ed1c24;
+}
+
+
+/* =========================================
+   ABOUT NJIT
+========================================= */
+
+.about-section {
+    background-color: white;
+
+    color: #111111;
+
+    min-height: 750px;
+}
+
+
+/* ABOUT IMAGE */
+
+.about-image {
+    height: 470px;
+
+    position: relative;
+
+    background-image:
+        url("images/njit-about.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+}
+
+.image-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 0.15),
+            rgba(0, 0, 0, 0.55)
+        );
+}
+
+
+/* ABOUT TITLE */
+
+.about-title {
+    position: absolute;
+
+    left: 7%;
+    bottom: 50px;
+
+    color: white;
+}
+
+.about-title span {
+    color: #ed1c24;
+
+    font-size: 14px;
+
+    font-weight: bold;
+}
+
+.about-title h2 {
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: clamp(50px, 7vw, 90px);
+
+    text-transform: uppercase;
+
+    line-height: 0.9;
+}
+
+
+/* ABOUT LOWER AREA */
+
+.about-content {
+    display: flex;
+
+    width: 86%;
+
+    margin: auto;
+
+    padding: 70px 0;
+}
+
+.section-number {
+    color: #ed1c24;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    width: 20%;
+}
+
+.about-text {
+    max-width: 650px;
+}
+
+.about-text h2 {
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 45px;
+
+    text-transform: uppercase;
+
+    margin-bottom: 25px;
+}
+
+.about-text p {
+    font-size: 17px;
+
+    line-height: 1.7;
+
+    margin-bottom: 18px;
+
+    color: #444444;
+}
+
+
+/* TEXT LINK */
+
+.text-link {
+    display: inline-block;
+
+    color: #ed1c24;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    text-transform: uppercase;
+
+    margin-top: 15px;
+
+    border-bottom: 2px solid #ed1c24;
+
+    padding-bottom: 5px;
+}
+
+
+/* =========================================
+   STUDENT LIFE
+========================================= */
+
+.student-section {
+    min-height: 750px;
+
+    display: grid;
+
+    grid-template-columns: 45% 55%;
+
+    background-color: #ed1c24;
+}
+
+
+/* STUDENT TEXT */
+
+.student-content {
+    padding: 100px 12%;
+
+    display: flex;
+
+    gap: 40px;
+
+    align-items: center;
+}
+
+.student-number {
+    font-size: 14px;
+
+    font-weight: bold;
+
+    color: white;
+}
+
+.student-content .small-title {
+    color: white;
+}
+
+.student-content h2 {
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: clamp(60px, 7vw, 100px);
+
+    line-height: 0.85;
+
+    text-transform: uppercase;
+
+    margin-bottom: 35px;
+}
+
+.student-description {
+    max-width: 400px;
+
+    font-size: 17px;
+
+    line-height: 1.7;
+
+    margin-bottom: 35px;
+}
+
+
+/* STUDENT IMAGE */
+
+.student-image {
+    min-height: 750px;
+
+    background-image:
+        url("images/njit-student-life.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+
+    position: relative;
+}
+
+
+/* WHITE BUTTON */
+
+.white-button {
+    background-color: white;
+
+    color: #ed1c24;
+
+    border: none;
+
+    padding: 15px 30px;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    text-transform: uppercase;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.white-button:hover {
+    background-color: #111111;
+
+    color: white;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.footer {
+    background-color: #111111;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 60px 20px;
+}
+
+.footer-logo {
+    color: #ed1c24;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 45px;
+
+    font-weight: bold;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 15px;
+}
+
+.footer p {
+    font-size: 14px;
+
+    margin-bottom: 10px;
+}
+
+.footer .copyright {
+    color: #777777;
+
+    font-size: 12px;
+
+    margin-top: 20px;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
+    .header {
+        padding: 0 30px;
+    }
+
+    .navigation {
+        gap: 15px;
+    }
+
+    .navigation a {
+        font-size: 11px;
+    }
+
+    .student-section {
+        grid-template-columns: 1fr;
+    }
+
+    .student-image {
+        min-height: 500px;
+
+        order: -1;
+    }
+
+    .student-content {
+        padding: 80px 10%;
+    }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+    .header {
+        height: 70px;
+
+        padding: 0 20px;
+    }
+
+    .logo {
+        font-size: 28px;
+    }
+
+    .university-name {
+        display: none;
+    }
+
+    .navigation {
+        gap: 10px;
+    }
+
+    .navigation a {
+        font-size: 9px;
+    }
+
+
+    .hero-section {
+        margin-top: 70px;
+
+        min-height: 90vh;
+    }
+
+    .hero-content {
+        width: 85%;
+    }
+
+    .hero-content h1 {
+        font-size: 60px;
+    }
+
+    .hero-description {
+        font-size: 15px;
+    }
+
+
+    .about-image {
+        height: 350px;
+    }
+
+    .about-title {
+        left: 8%;
+        bottom: 30px;
+    }
+
+    .about-title h2 {
+        font-size: 50px;
+    }
+
+    .about-content {
+        width: 85%;
+
+        padding: 50px 0;
+
+        display: block;
+    }
+
+    .section-number {
+        width: auto;
+
+        margin-bottom: 25px;
+    }
+
+    .about-text h2 {
+        font-size: 35px;
+    }
+
+
+    .student-image {
+        min-height: 400px;
+    }
+
+    .student-content {
+        padding: 60px 10%;
+
+        display: block;
+    }
+
+    .student-number {
+        margin-bottom: 30px;
+    }
+
+    .student-content h2 {
+        font-size: 60px;
+    }
+}
