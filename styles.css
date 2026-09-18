@@ -1,655 +1,824 @@
-/* =========================================
-   RESET
+﻿/* =========================================
+RESET
 ========================================= */
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #111111;
-    color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #111111;
+  color: white;
 }
 
-
-/* =========================================
-   GENERAL
-========================================= */
-
 a {
-    text-decoration: none;
-    color: inherit;
+  text-decoration: none;
+  color: inherit;
 }
 
 section {
-    scroll-margin-top: 80px;
+  scroll-margin-top: 80px;
 }
 
+/* =========================================
+COLORS
+========================================= */
+
+:root {
+  --njit-red: #ed1c24;
+  --black: #111111;
+  --dark-gray: #1b1b1b;
+  --white: #ffffff;
+  --light-gray: #f4f4f4;
+  --gray: #555555;
+}
 
 /* =========================================
-   HEADER
+HEADER
 ========================================= */
 
 .header {
-    width: 100%;
-    height: 80px;
-
-    background-color: #ffffff;
-    color: #111111;
-
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    padding: 0 60px;
-
-    position: fixed;
-    top: 0;
-    left: 0;
-
-    z-index: 1000;
-
-    border-bottom: 4px solid #ed1c24;
+  width: 100%;
+  height: 80px;
+  background-color: var(--white);
+  color: var(--black);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 60px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  border-bottom: 4px solid var(--njit-red);
 }
 
-
-/* LOGO */
-
 .logo-container {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .logo {
-    color: #ed1c24;
-
-    font-family: Georgia, "Times New Roman", serif;
-
-    font-size: 38px;
-    font-weight: bold;
-
-    letter-spacing: 3px;
+  color: var(--njit-red);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 38px;
+  font-weight: bold;
+  letter-spacing: 3px;
 }
 
 .university-name {
-    font-size: 9px;
-    line-height: 10px;
-
-    margin-left: 12px;
-
-    font-weight: bold;
+  font-size: 9px;
+  line-height: 10px;
+  margin-left: 12px;
+  font-weight: bold;
 }
 
-
-/* NAVIGATION */
-
 .navigation {
-    display: flex;
-    gap: 35px;
+  display: flex;
+  gap: 30px;
 }
 
 .navigation a {
-    color: #111111;
-
-    font-size: 14px;
-    font-weight: bold;
-
-    text-transform: uppercase;
-
-    transition: 0.3s;
+  color: var(--black);
+  font-size: 13px;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: 0.3s;
 }
 
 .navigation a:hover {
-    color: #ed1c24;
+  color: var(--njit-red);
 }
 
-
 /* =========================================
-   HERO / FRESHMAN INFO
+HERO
 ========================================= */
 
 .hero-section {
-
-    min-height: 100vh;
-
-    margin-top: 80px;
-
-    position: relative;
-
-    background-image:
-        linear-gradient(
-            rgba(0, 0, 0, 0.45),
-            rgba(0, 0, 0, 0.65)
-        ),
-        url("images/njit-campus.jpg");
-
-    background-size: cover;
-    background-position: center;
-
-    display: flex;
-    align-items: center;
+  min-height: 100vh;
+  margin-top: 80px;
+  position: relative;
+  background-image:
+    linear-gradient(
+      rgba(0, 0, 0, 0.42),
+      rgba(0, 0, 0, 0.72)
+    ),
+    url("images/njit-campus.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
 }
-
-
-/* RED SIDE BAR */
 
 .hero-section::before {
-    content: "";
-
-    position: absolute;
-
-    left: 0;
-    top: 0;
-
-    width: 9px;
-    height: 100%;
-
-    background-color: #ed1c24;
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 9px;
+  height: 100%;
+  background-color: var(--njit-red);
 }
 
-
-/* HERO CONTENT */
-
 .hero-content {
-    max-width: 1100px;
-
-    width: 90%;
-
-    margin: auto;
-
-    padding: 80px 0;
+  width: 90%;
+  max-width: 1150px;
+  margin: auto;
+  padding: 100px 0;
 }
 
 .small-title {
-    color: #ed1c24;
-
-    font-size: 13px;
-
-    font-weight: bold;
-
-    letter-spacing: 3px;
-
-    margin-bottom: 20px;
+  color: var(--njit-red);
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 3px;
+  margin-bottom: 20px;
 }
 
 .hero-content h1 {
-    font-family: Georgia, "Times New Roman", serif;
-
-    font-size: clamp(60px, 9vw, 125px);
-
-    line-height: 0.85;
-
-    text-transform: uppercase;
-
-    margin-bottom: 35px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(65px, 9vw, 130px);
+  line-height: 0.85;
+  text-transform: uppercase;
+  margin-bottom: 35px;
 }
 
 .hero-description {
-    max-width: 450px;
-
-    font-size: 18px;
-
-    line-height: 1.6;
-
-    margin-bottom: 35px;
+  max-width: 520px;
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 35px;
 }
 
-
-/* RED BUTTON */
+/* =========================================
+BUTTONS
+========================================= */
 
 .red-button {
-    display: inline-block;
-
-    background-color: #ed1c24;
-
-    color: white;
-
-    padding: 15px 30px;
-
-    font-size: 13px;
-
-    font-weight: bold;
-
-    text-transform: uppercase;
-
-    letter-spacing: 1px;
-
-    transition: 0.3s;
+  display: inline-block;
+  background-color: var(--njit-red);
+  color: white;
+  padding: 15px 30px;
+  font-size: 13px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: 0.3s;
 }
 
 .red-button:hover {
-    background-color: white;
-
-    color: #ed1c24;
+  background-color: white;
+  color: var(--njit-red);
 }
 
+.outline-button {
+  display: inline-block;
+  border: 2px solid white;
+  color: white;
+  padding: 13px 28px;
+  font-size: 13px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: 0.3s;
+}
+
+.outline-button:hover {
+  background-color: white;
+  color: var(--black);
+}
 
 /* =========================================
-   ABOUT NJIT
+ABOUT
 ========================================= */
 
 .about-section {
-    background-color: white;
-
-    color: #111111;
-
-    min-height: 750px;
+  background-color: white;
+  color: var(--black);
 }
 
-
-/* ABOUT IMAGE */
-
 .about-image {
-    height: 470px;
-
-    position: relative;
-
-    background-image:
-        url("images/njit-about.jpg");
-
-    background-size: cover;
-
-    background-position: center;
+  height: 470px;
+  position: relative;
+  background-image: url("images/njit-about.jpg");
+  background-size: cover;
+  background-position: center;
 }
 
 .image-overlay {
-    position: absolute;
-
-    inset: 0;
-
-    background:
-        linear-gradient(
-            to bottom,
-            rgba(0, 0, 0, 0.15),
-            rgba(0, 0, 0, 0.55)
-        );
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.05),
+    rgba(0, 0, 0, 0.7)
+  );
 }
 
-
-/* ABOUT TITLE */
-
 .about-title {
-    position: absolute;
-
-    left: 7%;
-    bottom: 50px;
-
-    color: white;
+  position: absolute;
+  left: 7%;
+  bottom: 50px;
+  color: white;
 }
 
 .about-title span {
-    color: #ed1c24;
-
-    font-size: 14px;
-
-    font-weight: bold;
+  color: var(--njit-red);
+  font-size: 14px;
+  font-weight: bold;
 }
 
 .about-title h2 {
-    font-family: Georgia, "Times New Roman", serif;
-
-    font-size: clamp(50px, 7vw, 90px);
-
-    text-transform: uppercase;
-
-    line-height: 0.9;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(55px, 7vw, 95px);
+  text-transform: uppercase;
+  line-height: 0.85;
 }
 
-
-/* ABOUT LOWER AREA */
-
 .about-content {
-    display: flex;
-
-    width: 86%;
-
-    margin: auto;
-
-    padding: 70px 0;
+  display: flex;
+  width: 86%;
+  margin: auto;
+  padding: 80px 0;
 }
 
 .section-number {
-    color: #ed1c24;
-
-    font-size: 14px;
-
-    font-weight: bold;
-
-    width: 20%;
+  color: var(--njit-red);
+  font-size: 14px;
+  font-weight: bold;
+  width: 18%;
 }
 
 .about-text {
-    max-width: 650px;
+  max-width: 800px;
 }
 
 .about-text h2 {
-    font-family: Georgia, "Times New Roman", serif;
-
-    font-size: 45px;
-
-    text-transform: uppercase;
-
-    margin-bottom: 25px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(35px, 5vw, 60px);
+  text-transform: uppercase;
+  line-height: 1;
+  margin-bottom: 30px;
 }
 
 .about-text p {
-    font-size: 17px;
-
-    line-height: 1.7;
-
-    margin-bottom: 18px;
-
-    color: #444444;
+  font-size: 17px;
+  line-height: 1.7;
+  margin-bottom: 18px;
+  color: #444;
 }
 
+/* ABOUT FACTS */
+
+.about-facts {
+  display: flex;
+  gap: 50px;
+  margin-top: 45px;
+  border-top: 2px solid #ddd;
+  padding-top: 30px;
+}
+
+.about-facts div {
+  display: flex;
+  flex-direction: column;
+}
+
+.about-facts strong {
+  color: var(--njit-red);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 40px;
+}
+
+.about-facts span {
+  font-size: 12px;
+  text-transform: uppercase;
+  font-weight: bold;
+  max-width: 130px;
+}
+
+/* =========================================
+PROGRAMS
+========================================= */
+
+.programs-section {
+  background-color: #f4f4f4;
+  color: var(--black);
+  padding: 100px 0;
+}
+
+.section-heading {
+  width: 86%;
+  max-width: 1100px;
+  margin: 0 auto 60px;
+}
+
+.section-heading h2 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(50px, 7vw, 90px);
+  text-transform: uppercase;
+  line-height: 0.9;
+  margin-bottom: 25px;
+}
+
+.section-heading > p:last-child {
+  max-width: 600px;
+  color: #555;
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+/* PROGRAM CARDS */
+
+.program-card {
+  background-color: white;
+  min-height: 330px;
+  padding: 40px;
+  border-top: 5px solid var(--njit-red);
+  transition: 0.3s;
+}
+
+.program-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+}
+
+.program-number {
+  color: var(--njit-red);
+  font-weight: bold;
+  margin-bottom: 50px;
+}
+
+.program-card h3 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 32px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.program-card p {
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+.program-card a {
+  color: var(--njit-red);
+  font-size: 13px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+/* =========================================
+STUDENT LIFE
+========================================= */
+
+.student-section {
+  min-height: 750px;
+  display: grid;
+  grid-template-columns: 45% 55%;
+  background-color: var(--njit-red);
+}
+
+.student-content {
+  padding: 100px 12%;
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+
+.student-number {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.student-content .small-title {
+  color: white;
+}
+
+.student-content h2 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(60px, 7vw, 100px);
+  line-height: 0.85;
+  text-transform: uppercase;
+  margin-bottom: 35px;
+}
+
+.student-description {
+  max-width: 420px;
+  font-size: 17px;
+  line-height: 1.7;
+  margin-bottom: 30px;
+}
+
+.student-image {
+  min-height: 750px;
+  background-image: url("images/njit-student-life.jpg");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.white-button {
+  background-color: white;
+  color: var(--njit-red);
+  border: none;
+  padding: 15px 30px;
+  font-size: 13px;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.white-button:hover {
+  background-color: var(--black);
+  color: white;
+}
+
+/* JAVASCRIPT MESSAGE */
+
+.student-message {
+  display: none;
+  max-width: 420px;
+  background-color: rgba(0, 0, 0, 0.18);
+  padding: 20px;
+  margin-top: 20px;
+  border-left: 3px solid white;
+}
+
+.student-message p {
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* =========================================
+LIFE CARDS
+========================================= */
+
+.life-cards-section {
+  background-color: white;
+  color: var(--black);
+  padding: 100px 0;
+}
+
+.life-card {
+  border: 1px solid #ddd;
+  padding: 35px;
+  min-height: 260px;
+  transition: 0.3s;
+}
+
+.life-card:hover {
+  border-color: var(--njit-red);
+  transform: translateY(-5px);
+}
+
+.life-card span {
+  color: var(--njit-red);
+  font-weight: bold;
+}
+
+.life-card h3 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 28px;
+  text-transform: uppercase;
+  margin: 35px 0 15px;
+}
+
+.life-card p {
+  color: #555;
+  line-height: 1.6;
+}
+
+/* =========================================
+ADMISSIONS
+========================================= */
+
+.admissions-section {
+  background-color: var(--black);
+  padding: 110px 0;
+}
+
+.admissions-container {
+  width: 86%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.admissions-heading {
+  max-width: 700px;
+  margin-bottom: 70px;
+}
+
+.admissions-heading h2 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(55px, 7vw, 90px);
+  line-height: 0.85;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+
+.admissions-heading > p:last-child {
+  font-size: 17px;
+  line-height: 1.6;
+  color: #ccc;
+}
+
+/* ADMISSIONS BOXES */
+
+.admissions-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.admission-box {
+  background-color: #1d1d1d;
+  padding: 40px;
+  min-height: 370px;
+  border-top: 4px solid var(--njit-red);
+}
+
+.box-number {
+  color: var(--njit-red);
+  font-weight: bold;
+}
+
+.admission-box h3 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 30px;
+  text-transform: uppercase;
+  margin: 35px 0 25px;
+}
+
+.admission-box p {
+  color: #ccc;
+  line-height: 1.7;
+}
+
+.price {
+  color: var(--njit-red);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 42px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.small-note {
+  font-size: 13px;
+  color: #999 !important;
+}
 
 /* TEXT LINK */
 
 .text-link {
-    display: inline-block;
-
-    color: #ed1c24;
-
-    font-size: 14px;
-
-    font-weight: bold;
-
-    text-transform: uppercase;
-
-    margin-top: 15px;
-
-    border-bottom: 2px solid #ed1c24;
-
-    padding-bottom: 5px;
+  display: inline-block;
+  color: var(--njit-red);
+  font-size: 13px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-top: 15px;
+  border-bottom: 2px solid var(--njit-red);
+  padding-bottom: 5px;
 }
 
-
 /* =========================================
-   STUDENT LIFE
+FINAL CTA
 ========================================= */
 
-.student-section {
-    min-height: 750px;
-
-    display: grid;
-
-    grid-template-columns: 45% 55%;
-
-    background-color: #ed1c24;
+.final-cta {
+  background-color: var(--njit-red);
+  text-align: center;
+  padding: 120px 20px;
 }
 
-
-/* STUDENT TEXT */
-
-.student-content {
-    padding: 100px 12%;
-
-    display: flex;
-
-    gap: 40px;
-
-    align-items: center;
+.final-cta .small-title {
+  color: white;
 }
 
-.student-number {
-    font-size: 14px;
-
-    font-weight: bold;
-
-    color: white;
+.final-cta h2 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(50px, 8vw, 100px);
+  text-transform: uppercase;
+  line-height: 0.9;
+  margin-bottom: 25px;
 }
 
-.student-content .small-title {
-    color: white;
+.final-cta > p:not(.small-title) {
+  max-width: 600px;
+  margin: 0 auto 35px;
+  line-height: 1.6;
+  font-size: 17px;
 }
 
-.student-content h2 {
-    font-family: Georgia, "Times New Roman", serif;
-
-    font-size: clamp(60px, 7vw, 100px);
-
-    line-height: 0.85;
-
-    text-transform: uppercase;
-
-    margin-bottom: 35px;
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
 }
-
-.student-description {
-    max-width: 400px;
-
-    font-size: 17px;
-
-    line-height: 1.7;
-
-    margin-bottom: 35px;
-}
-
-
-/* STUDENT IMAGE */
-
-.student-image {
-    min-height: 750px;
-
-    background-image:
-        url("images/njit-student-life.jpg");
-
-    background-size: cover;
-
-    background-position: center;
-
-    position: relative;
-}
-
-
-/* WHITE BUTTON */
-
-.white-button {
-    background-color: white;
-
-    color: #ed1c24;
-
-    border: none;
-
-    padding: 15px 30px;
-
-    font-size: 13px;
-
-    font-weight: bold;
-
-    text-transform: uppercase;
-
-    cursor: pointer;
-
-    transition: 0.3s;
-}
-
-.white-button:hover {
-    background-color: #111111;
-
-    color: white;
-}
-
 
 /* =========================================
-   FOOTER
+FOOTER
 ========================================= */
 
 .footer {
-    background-color: #111111;
-
-    color: white;
-
-    text-align: center;
-
-    padding: 60px 20px;
+  background-color: var(--black);
+  color: white;
+  text-align: center;
+  padding: 60px 20px;
 }
 
 .footer-logo {
-    color: #ed1c24;
-
-    font-family: Georgia, "Times New Roman", serif;
-
-    font-size: 45px;
-
-    font-weight: bold;
-
-    letter-spacing: 4px;
-
-    margin-bottom: 15px;
+  color: var(--njit-red);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 45px;
+  font-weight: bold;
+  letter-spacing: 4px;
+  margin-bottom: 15px;
 }
 
 .footer p {
-    font-size: 14px;
-
-    margin-bottom: 10px;
+  font-size: 14px;
+  margin-bottom: 8px;
 }
 
 .footer .copyright {
-    color: #777777;
-
-    font-size: 12px;
-
-    margin-top: 20px;
+  color: #777;
+  font-size: 12px;
+  margin-top: 20px;
 }
 
-
 /* =========================================
-   TABLET
+TABLET
 ========================================= */
 
 @media (max-width: 900px) {
+  .header {
+    padding: 0 30px;
+  }
 
-    .header {
-        padding: 0 30px;
-    }
+  .navigation {
+    gap: 15px;
+  }
 
-    .navigation {
-        gap: 15px;
-    }
+  .navigation a {
+    font-size: 10px;
+  }
 
-    .navigation a {
-        font-size: 11px;
-    }
+  .student-section {
+    grid-template-columns: 1fr;
+  }
 
-    .student-section {
-        grid-template-columns: 1fr;
-    }
+  .student-image {
+    min-height: 500px;
+    order: -1;
+  }
 
-    .student-image {
-        min-height: 500px;
+  .student-content {
+    padding: 80px 10%;
+  }
 
-        order: -1;
-    }
-
-    .student-content {
-        padding: 80px 10%;
-    }
+  .admissions-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
-
 /* =========================================
-   MOBILE
+MOBILE
 ========================================= */
 
 @media (max-width: 600px) {
+  .header {
+    height: 70px;
+    padding: 0 18px;
+  }
 
-    .header {
-        height: 70px;
+  .logo {
+    font-size: 28px;
+  }
 
-        padding: 0 20px;
-    }
+  .university-name {
+    display: none;
+  }
 
-    .logo {
-        font-size: 28px;
-    }
+  .navigation {
+    gap: 9px;
+  }
 
-    .university-name {
-        display: none;
-    }
+  .navigation a {
+    font-size: 8px;
+  }
 
-    .navigation {
-        gap: 10px;
-    }
+  .hero-section {
+    margin-top: 70px;
+    min-height: 90vh;
+  }
 
-    .navigation a {
-        font-size: 9px;
-    }
+  .hero-content {
+    width: 85%;
+  }
 
+  .hero-content h1 {
+    font-size: 58px;
+  }
 
-    .hero-section {
-        margin-top: 70px;
+  .hero-description {
+    font-size: 15px;
+  }
 
-        min-height: 90vh;
-    }
+  .about-image {
+    height: 350px;
+  }
 
-    .hero-content {
-        width: 85%;
-    }
+  .about-title {
+    left: 8%;
+    bottom: 30px;
+  }
 
-    .hero-content h1 {
-        font-size: 60px;
-    }
+  .about-title h2 {
+    font-size: 52px;
+  }
 
-    .hero-description {
-        font-size: 15px;
-    }
+  .about-content {
+    width: 85%;
+    padding: 55px 0;
+    display: block;
+  }
 
+  .section-number {
+    width: auto;
+    margin-bottom: 25px;
+  }
 
-    .about-image {
-        height: 350px;
-    }
+  .about-text h2 {
+    font-size: 38px;
+  }
 
-    .about-title {
-        left: 8%;
-        bottom: 30px;
-    }
+  .about-facts {
+    flex-direction: column;
+    gap: 25px;
+  }
 
-    .about-title h2 {
-        font-size: 50px;
-    }
+  .programs-section,
+  .life-cards-section,
+  .admissions-section {
+    padding: 75px 0;
+  }
 
-    .about-content {
-        width: 85%;
+  .section-heading {
+    width: 85%;
+  }
 
-        padding: 50px 0;
+  .section-heading h2 {
+    font-size: 52px;
+  }
 
-        display: block;
-    }
+  .program-card {
+    min-height: auto;
+  }
 
-    .section-number {
-        width: auto;
+  .student-image {
+    min-height: 400px;
+  }
 
-        margin-bottom: 25px;
-    }
+  .student-content {
+    padding: 65px 10%;
+    display: block;
+  }
 
-    .about-text h2 {
-        font-size: 35px;
-    }
+  .student-number {
+    margin-bottom: 30px;
+  }
 
+  .student-content h2 {
+    font-size: 60px;
+  }
 
-    .student-image {
-        min-height: 400px;
-    }
+  .admissions-container {
+    width: 85%;
+  }
 
-    .student-content {
-        padding: 60px 10%;
+  .admissions-heading h2 {
+    font-size: 58px;
+  }
 
-        display: block;
-    }
+  .admission-box {
+    min-height: auto;
+  }
 
-    .student-number {
-        margin-bottom: 30px;
-    }
+  .final-cta {
+    padding: 90px 20px;
+  }
 
-    .student-content h2 {
-        font-size: 60px;
-    }
+  .final-cta h2 {
+    font-size: 55px;
+  }
 }
