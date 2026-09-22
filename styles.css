@@ -375,9 +375,7 @@ PROGRAMS
   text-transform: uppercase;
 }
 
-/* =========================================
-STUDENT LIFE
-========================================= */
+/* Student life*/
 
 .student-section {
   min-height: 750px;
@@ -442,7 +440,7 @@ STUDENT LIFE
   color: white;
 }
 
-/* JAVASCRIPT MESSAGE */
+/* Java message */
 
 .student-message {
   display: none;
@@ -458,9 +456,7 @@ STUDENT LIFE
   line-height: 1.6;
 }
 
-/* =========================================
-LIFE CARDS
-========================================= */
+/*Cards*/
 
 .life-cards-section {
   background-color: white;
@@ -497,9 +493,7 @@ LIFE CARDS
   line-height: 1.6;
 }
 
-/* =========================================
-ADMISSIONS
-========================================= */
+/*Admission stuff*/
 
 .admissions-section {
   background-color: var(--black);
