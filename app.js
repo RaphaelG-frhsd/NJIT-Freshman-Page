@@ -9,18 +9,18 @@ if (studentButton && studentMessage) {
         
         if (studentMessage.style.display === "block") {
 
-            // Hide the message
+            // Hides message
             studentMessage.style.display = "none";
 
-            // Change the button text
+            // Changes button text
             studentButton.textContent = "Learn More";
 
         } else {
 
-            // Show the message
+            // Shows message
             studentMessage.style.display = "block";
 
-            // Change the button text
+            // Changes button text
             studentButton.textContent = "Hide Information";
 
         }
