@@ -384,24 +384,9 @@ PROGRAMS
 
 /* Student life*/
 
-.student-section {
-  min-height: 750px;
-  display: grid;
-  grid-template-columns: 45% 55%;
-  background-color: var(--njit-red);
-}
 
-.student-content {
-  padding: 100px 12%;
-  display: flex;
-  gap: 40px;
-  align-items: center;
-}
 
-.student-number {
-  font-size: 14px;
-  font-weight: bold;
-}
+
 
 .student-content .small-title {
   color: white;
