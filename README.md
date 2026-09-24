@@ -1,1 +1,2 @@
-U used AI on the HTML and CSS. 
+U used AI on the HTML and CSS. Specifically Chat and the one built into VS code.
+I also used it to help me with java tags and asked it to explain what they do so I don't start stuttering at the board. :0
